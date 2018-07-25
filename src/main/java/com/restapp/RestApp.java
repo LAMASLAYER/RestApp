@@ -1,4 +1,4 @@
-package com.pimence;
+package com.restapp;
 
 
 import org.springframework.boot.CommandLineRunner;
@@ -10,12 +10,12 @@ import org.springframework.context.annotation.Bean;
 import java.util.Arrays;
 
 @SpringBootApplication
-public class Pimence {
+public class RestApp {
 
 
     public static void main(String[] args) {
 
-        SpringApplication.run(Pimence.class, args);
+        SpringApplication.run(RestApp.class, args);
 
     }
 
