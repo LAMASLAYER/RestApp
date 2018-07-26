@@ -1,7 +1,7 @@
 package com.restapp.controllers;
 
-import com.restapp.models.User;
 import com.restapp.interfaces.IUser;
+import com.restapp.models.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +24,7 @@ public class UserController {
 
     @RequestMapping("/getUsers")
     @ResponseBody
-    public List<User> getAllUsers() {
+    public List<Users> getAllUsers() {
         LOGGER.info("Retrieving users...");
         return ur.findAll();
     }

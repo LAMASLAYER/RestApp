@@ -1,7 +1,7 @@
 package com.restapp.interfaces;
 
-import com.restapp.models.User;
+import com.restapp.models.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IUser extends JpaRepository<User, Integer> {
+public interface IUser extends JpaRepository<Users, Integer> {
 }

@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.sql.Date;
 
 @Entity
-public class User {
+public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 
@@ -17,7 +17,7 @@ public class User {
     private String password;
     private int credentials;
 
-    public User(int user_id, Date creation_date, int credentials, String name,String password) {
+    public Users(int user_id, Date creation_date, int credentials, String name,String password) {
         super();
         this.username = name;
         this.password = password;
@@ -26,7 +26,7 @@ public class User {
         this.creation_date = creation_date;
     }
 
-    public User(){
+    public Users(){
         super();
     }
 
