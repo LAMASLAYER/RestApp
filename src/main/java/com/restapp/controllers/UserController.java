@@ -1,12 +1,12 @@
 package com.restapp.controllers;
 
-import com.restapp.interfaces.IUser;
+
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
+import com.restapp.repositories.UserRepository;
 import com.restapp.models.Users;
+import com.restapp.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -19,14 +19,32 @@ public class UserController {
 
     private static final Logger LOGGER = Logger.getLogger(UserController.class);
 
+    private final UserRepository userRepository;
+    private final UserService userService;
+
     @Autowired
-    IUser ur;
+    public UserController(UserRepository ur, UserService userService) {
+        this.userRepository = ur;
+        this.userService = userService;
+    }
 
     @RequestMapping("/getUsers")
     @ResponseBody
     public List<Users> getAllUsers() {
         LOGGER.info("Retrieving users...");
-        return ur.findAll();
+        return userRepository.findAll();
+    }
+
+
+
+    @RequestMapping("/{user_id}")
+    public Users getUserById(@PathVariable Integer user_id) {
+        return userService.getUserById(user_id);
+    }
+
+    @RequestMapping("/post")
+    public void saveUser(@RequestBody Users user) {
+            userService.saveUser(user);
     }
 
 }

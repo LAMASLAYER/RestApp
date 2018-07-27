@@ -30,7 +30,7 @@ public class Users {
         super();
     }
 
-    public String getUsrname() {
+    public String getUsername() {
         return username;
     }
 
@@ -46,7 +46,7 @@ public class Users {
         this.password = password;
     }
 
-    public int getCredendtials() {
+    public int getCredentials() {
         return credentials;
     }
 
