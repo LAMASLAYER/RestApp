@@ -11,6 +11,8 @@ public class IndexController {
             return "Welcome on RestApp back-end."
                     + "<br/>"
                     + "See users: "
-                    + "<a href='/users/getUsers'>Users</a><br/>";
+                    + "<a href='/users/getUsers'>Users</a><br/>"
+                    + "See assets URLs: "
+                    + "<a href='/assets/get'>Assets</a><br/>";
         }
 }

@@ -1,7 +1,6 @@
 package com.restapp.controllers;
 
 
-import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 import com.restapp.repositories.UserRepository;
 import com.restapp.models.Users;
 import com.restapp.services.UserService;

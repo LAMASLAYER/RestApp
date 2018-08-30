@@ -5,8 +5,8 @@
     <version>0.1</version>
     <name>RestApp</name>
     <url>http://maven.apache.org</url>
-    <groupId>com.pimence</groupId>
-    <artifactId>Pimence</artifactId>
+    <groupId>com.restapp</groupId>
+    <artifactId>RestApp</artifactId>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
