@@ -31,7 +31,7 @@ public class AssetsController {
     @RequestMapping("/get")
     @ResponseBody
     public List<Assets> getAllAssets() {
-        LOGGER.info("Retrieving users...");
+        LOGGER.info("Retrieving assets...");
         return assetsRepository.findAll();
     }
 
